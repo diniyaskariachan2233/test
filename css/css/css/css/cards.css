@@ -1,0 +1,18 @@
+.card {
+  background: var(--bg); border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: var(--space-lg);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--border-strong); }
+
+.card-metric { padding: var(--space-md) var(--space-lg); background: var(--bg-secondary); border-color: transparent; }
+.card-metric .label { font-size: var(--text-sm); color: var(--text-tertiary); margin-bottom: 4px; }
+.card-metric .value { font-size: 28px; font-weight: 500; color: var(--text-primary); font-family: var(--font-body); line-height: 1.2; }
+
+.card-project { padding: 0; overflow: hidden; }
+.card-project .card-img  { height: 180px; width: 100%; }
+.card-project .card-body { padding: var(--space-md) var(--space-lg) var(--space-lg); }
+.card-project h3 { font-size: 18px; margin: 8px 0 6px; color: var(--text-primary); }
+.card-project p  { font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.6; }
+
+.card-featured { border: 2px solid var(--accent); }
