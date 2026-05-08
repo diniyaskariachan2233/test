@@ -1,0 +1,34 @@
+[data-theme="dark"] {
+  --bg:            #111111;
+  --bg-secondary:  #1C1C1E;
+  --bg-tertiary:   #2C2C2E;
+  --text-primary:   #F5F5F5;
+  --text-secondary: #ABABAB;
+  --text-tertiary:  #6E6E73;
+  --border:        rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.16);
+  --accent:        #378ADD;
+  --accent-light:  rgba(55,138,221,0.15);
+  --accent-dark:   #85B7EB;
+  --success-light: rgba(29,158,117,0.15);
+  --warning-light: rgba(186,117,23,0.15);
+  --danger-light:  rgba(226,75,74,0.15);
+  --color-900: #F5F5F5; --color-800: #E5E5EA;
+  --color-600: #ABABAB; --color-400: #6E6E73;
+  --color-100: #2C2C2E; --color-50:  #1C1C1E;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md: 0 6px 20px rgba(0,0,0,0.5);
+}
+body, .card, .navbar, .input, .btn {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+[data-theme="dark"] .navbar { background: rgba(17,17,17,0.85); }
+[data-theme="dark"] .input  { background: var(--bg-secondary); }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --bg:#111111; --bg-secondary:#1C1C1E; --bg-tertiary:#2C2C2E;
+    --text-primary:#F5F5F5; --text-secondary:#ABABAB; --text-tertiary:#6E6E73;
+    --border:rgba(255,255,255,0.08); --border-strong:rgba(255,255,255,0.16);
+    --accent:#378ADD; --accent-light:rgba(55,138,221,0.15);
+  }
+}
