@@ -1,0 +1,38 @@
+@keyframes fadeUp    { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn    { from { opacity:0; } to { opacity:1; } }
+@keyframes slideIn   { from { opacity:0; transform:translateX(24px); } to { opacity:1; transform:translateX(0); } }
+@keyframes pulse     { 0%,100% { transform:scale(1); opacity:1; } 50% { transform:scale(1.12); opacity:.75; } }
+@keyframes shimmer   { 0% { background-position:200% 0; } 100% { background-position:-200% 0; } }
+@keyframes spin      { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+@keyframes scaleIn   { from { opacity:0; transform:scale(0.92); } to { opacity:1; transform:scale(1); } }
+
+.fade-up  { animation: fadeUp  0.55s ease both; }
+.fade-in  { animation: fadeIn  0.4s  ease both; }
+.slide-in { animation: slideIn 0.45s ease both; }
+.scale-in { animation: scaleIn 0.35s ease both; }
+.pulse    { animation: pulse   2s ease-in-out infinite; }
+.spin     { animation: spin    1s linear infinite; }
+
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.12s; }
+.stagger > *:nth-child(3) { animation-delay: 0.19s; }
+.stagger > *:nth-child(4) { animation-delay: 0.26s; }
+.stagger > *:nth-child(5) { animation-delay: 0.33s; }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-tertiary) 50%, var(--bg-secondary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+[data-reveal] { opacity:0; transform:translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+[data-reveal].visible { opacity:1; transform:translateY(0); }
+
+.hover-lift { transition: transform var(--transition-base), box-shadow var(--transition-base); }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
+  [data-reveal] { opacity:1; transform:none; }
+}
