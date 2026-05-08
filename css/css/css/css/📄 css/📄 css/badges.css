@@ -1,0 +1,19 @@
+.chip { display: inline-flex; align-items: center; gap: 5px; font-size: var(--text-xs); font-weight: 500; padding: 4px 11px; border-radius: var(--radius-full); white-space: nowrap; }
+.chip-info    { background: var(--accent-light);   color: var(--accent-dark); }
+.chip-success { background: var(--success-light);  color: #085041; }
+.chip-warning { background: var(--warning-light);  color: #633806; }
+.chip-danger  { background: var(--danger-light);   color: #791F1F; }
+.chip-neutral { background: var(--color-100);      color: var(--color-600); }
+.chip-outline { background: transparent; border: 1px solid var(--border-strong); color: var(--text-secondary); }
+
+.badge { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 5px; border-radius: var(--radius-full); font-size: 10px; font-weight: 600; }
+.badge-primary { background: var(--color-900); color: #fff; }
+.badge-accent  { background: var(--accent);    color: #fff; }
+.badge-danger  { background: var(--danger);    color: #fff; }
+.badge-success { background: var(--success);   color: #fff; }
+
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: var(--radius-full); flex-shrink: 0; }
+.dot-success { background: var(--success); } .dot-warning { background: var(--warning); }
+.dot-danger  { background: var(--danger);  } .dot-info    { background: var(--accent);  }
+
+.tag { display: inline-block; font-size: var(--text-xs); font-weight: 500; padding: 3px 10px; border-radius: var(--radius-sm); background: var(--bg-secondary); color: var(--text-secondary); border: 0.5px solid var(--border); }
